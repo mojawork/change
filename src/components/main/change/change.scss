@@ -1,0 +1,80 @@
+// ----------------------------------------------------------------------------
+// Config
+@import "~@/scss/import.scss";
+
+// ----------------------------------------------------------------------------
+
+.wrapper {
+
+  --image-size: 32rem;
+
+  @include mediascreen($mediascreen: 'custom', $max: $ms-4-max) {
+    --image-size: 24rem;
+  }
+
+  position: relative;
+  display: flex;
+  margin-top: $margin * 2;
+  height: calc(100% - #{$margin * 4});
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  flex-flow: column;
+  background-color: var(--c-thirdly);
+  background: linear-gradient(45deg, var(--c-thirdly) 0%, var(--c-fourthly) 68%, var(--c-fourthly) 100%);
+  box-shadow: 0 0 0.6rem 0 var(--c-primary);
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: -6rem;
+    width: 100%;
+    height: 200px;
+    background-image: url("../../../assets/svg/bg.svg");
+    z-index: 4;
+  }
+
+  .top, .bottom {
+    display: flex;
+    width: 100%;
+    background-image: url("../../../assets/svg/cash.svg");
+    background-size: var(--image-size);
+    background-repeat: no-repeat;
+  }
+
+  .top {
+    display: flex;
+    background-position: top center;
+    height: calc(var(--image-size) * 0.94);
+    z-index: 1;
+  }
+
+  .bottom {
+    display: flex;
+    background-position: bottom center;
+    height: calc(var(--image-size) * 1.26);
+    z-index: 3;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    min-height: calc(var(--image-size) * 0.4);
+    width: 80%;
+    margin-top: calc(0px - var(--image-size) * 0.1);
+    margin-bottom: calc(0px - var(--image-size) * 0.162);
+    transform: rotate(-10deg);
+    border: 1rem solid var(--c-primary);
+    border-radius: 3rem;
+    flex-flow: column;
+    padding: $padding;
+    background-color: var(--c-background);
+    overflow: hidden;
+    z-index: 2;
+  }
+
+}

@@ -1,0 +1,9 @@
+<div class="textanimate">
+    <span v-for="(letter, index) in letters"
+          :style="cssStyles(index)"
+          :class="options.animation"
+          v-html="filterLetter(letter)"
+    />
+</div>
+
+

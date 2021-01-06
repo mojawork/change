@@ -1,0 +1,68 @@
+// ----------------------------------------------------------------------------
+// Config
+@import "~@/scss/import";
+
+// ----------------------------------------------------------------------------
+
+.layout {
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+  min-width: 100%;
+  > header, > main, > footer{
+    display: flex;
+    justify-content: center;
+    padding:$padding;
+
+  }
+
+  > header {
+    flex: 0 0;
+    color: var(--text-secondary);
+    background-color: var(--c-primary);
+  }
+
+  > main {
+    flex: 1 1;
+    color: var(text-primary);
+    background-color: var(--c-secondary);
+  }
+
+  > footer {
+    flex: 0 0;
+    color: var(--text-secondary);
+    background-color: var(--c-primary);
+  }
+
+  .layout-wrapper {
+    transition: $time;
+
+    //--- mediascreen 1 ---
+    @include mediascreen($mediascreen: 'ms1') {
+      @include layout($mediascreen: 'ms1');
+    }
+    //--- mediascreen 2 ---
+    @include mediascreen($mediascreen: 'ms2') {
+      @include layout($mediascreen: 'ms2');
+    }
+    //--- mediascreen 3 ---
+    @include mediascreen($mediascreen: 'ms3') {
+      @include layout($mediascreen: 'ms3');
+    }
+    //--- mediascreen 4 ---
+    @include mediascreen($mediascreen: 'ms4') {
+      @include layout($mediascreen: 'ms4');
+    }
+    //--- mediascreen 5 ---
+    @include mediascreen($mediascreen: 'ms5') {
+      @include layout($mediascreen: 'ms5');
+    }
+    //--- mediascreen 6 ---
+    @include mediascreen($mediascreen: 'ms6') {
+      @include layout($mediascreen: 'ms6');
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+

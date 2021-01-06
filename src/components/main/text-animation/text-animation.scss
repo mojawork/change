@@ -1,0 +1,128 @@
+// ----------------------------------------------------------------------------
+// Config
+@import "~@/scss/import.scss";
+// ----------------------------------------------------------------------------
+
+$annimation-time: 6.8s;
+// ----------------------------------------------------------------------------
+// annimation
+// ----------------------------------------------------------------------------
+@keyframes zoomInOut {
+  0% {
+    color: transparent;
+    transform: scale(1);
+
+  }
+  2% {
+    color: var(--text-primary);
+  }
+  4% {
+    transform: scale(6);
+  }
+  12% {
+    transform: scale(1);
+    color: var(--text-primary);
+  }
+  96% {
+    transform: scale(1);
+    color: var(--text-primary);
+  }
+  100% {
+    transform: scale(1);
+    color: var(--text-primary);
+  }
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0) scale(1.2);
+    color: transparent;
+  }
+  10% {
+    transform: scaleX(1);
+    color: var(--text-primary);
+  }
+  94% {
+    color: var(--text-primary);
+  }
+}
+
+@keyframes moveInUp {
+  0% {
+    transform: translateY(-100px);
+    color: transparent;
+  }
+  6% {
+    transform: translateY(0);
+    color: var(--text-primary);
+  }
+  94% {
+    color: var(--text-primary);
+  }
+}
+
+@keyframes moveInDown {
+  0% {
+    transform: translateY(100px);
+    color: transparent;
+  }
+  6% {
+    transform: translateY(0);
+    color: var(--text-primary);
+  }
+  94% {
+    color: var(--text-primary);
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Default
+// ----------------------------------------------------------------------------
+.textanimate {
+  display: flex;
+  flex-grow: 1;
+  padding: 2.6em;
+
+  span {
+    display: flex;
+    animation-duration: $annimation-time;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    color: var(--text-primary);
+
+    @include mediascreen($mediascreen: 'custom', $max: $ms-3-max) {
+      font-size: 6vw;
+    }
+
+    @include mediascreen($mediascreen: 'custom', $min: $ms-4-min, $max: $ms-5-max) {
+      font-size: 4.8vw;
+    }
+
+    @include mediascreen($mediascreen: 'ms6') {
+      font-size: 6rem;
+    }
+  }
+
+  //--- animationClasses ---
+  span.zoomInOut {
+    animation-name: zoomInOut;
+  }
+
+  span.moveFromRight {
+    animation-name: moveFromRight;
+  }
+
+  span.scaleX {
+    animation-name: scaleX;
+  }
+
+  span:nth-child(even).moveIn {
+    animation-name: moveInUp;
+  }
+
+  span:nth-child(odd).moveIn {
+    animation-name: moveInDown;
+  }
+
+
+}

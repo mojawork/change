@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------------
+// Config
+// ----------------------------------------------------------------------------
+
+@mixin layout(
+  $mediascreen:null) {
+
+  // -- mediascreen1 - mediascreen2 ---
+  @if $mediascreen == 'ms1' or $mediascreen == 'ms2' {
+    width: 100%;
+    min-width: $ms-1-min;
+  }
+
+  // -- mediascreen3 ---
+  @if $mediascreen == 'ms3' {
+    width: 94%;
+  }
+
+  // -- mediascreen4 ---
+  @if $mediascreen == 'ms4' {
+    width: 50%;
+  }
+
+  // -- mediascreen5 ---
+  @if $mediascreen == 'ms5' {
+    width: 50%;
+  }
+
+  // -- mediascreen6 ---
+  @if $mediascreen == 'ms6' {
+    width: $ms-6-min;
+  }
+
+}
+
+
+
