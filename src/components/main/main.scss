@@ -5,6 +5,12 @@
 // ----------------------------------------------------------------------------
 
 main {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $margin *2;
+    margin: $margin* 2 0
+  }
 }
 
 // --- mediascreen 01 - 03 ---

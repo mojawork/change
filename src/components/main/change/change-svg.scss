@@ -1,0 +1,52 @@
+// ----------------------------------------------------------------------------
+// Config
+@import "~@/scss/import.scss";
+
+// ----------------------------------------------------------------------------
+
+.wrapper {
+
+  &.vader {
+    .top, .bottom {
+      background-image: url("../../../assets/svg/vader.svg");
+    }
+  }
+
+  &.master {
+    .top, .bottom {
+      background-image: url("../../../assets/svg/master.svg");
+    }
+  }
+
+  &.mario {
+    .top, .bottom {
+      background-image: url("../../../assets/svg/mario.svg");
+    }
+  }
+
+  &.sonic {
+    .top, .bottom {
+      background-image: url("../../../assets/svg/sonic.svg");
+    }
+  }
+
+  &.harley {
+    .top, .bottom {
+      background-image: url("../../../assets/svg/harley.svg");
+    }
+  }
+
+  &.deadpool {
+    .top, .bottom {
+      background-image: url("../../../assets/svg/deadpool.svg");
+    }
+  }
+
+  &.crash {
+    .top, .bottom {
+      background-image: url("../../../assets/svg/crash.svg");
+    }
+  }
+
+
+}

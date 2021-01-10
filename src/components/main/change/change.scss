@@ -10,12 +10,13 @@
 
   @include mediascreen($mediascreen: 'custom', $max: $ms-4-max) {
     --image-size: 24rem;
+
   }
 
   position: relative;
   display: flex;
-  margin-top: $margin * 2;
-  height: calc(100% - #{$margin * 4});
+  //margin-top: $margin * 2;
+  //height: calc(100% - #{$margin * 4});
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -26,6 +27,7 @@
   box-shadow: 0 0 0.6rem 0 var(--c-primary);
   overflow: hidden;
 
+  /*
   &:before {
     content: "";
     display: flex;
@@ -38,10 +40,12 @@
     z-index: 4;
   }
 
+   */
+
+
   .top, .bottom {
     display: flex;
-    width: 100%;
-    background-image: url("../../../assets/svg/cash.svg");
+    width: var(--image-size);
     background-size: var(--image-size);
     background-repeat: no-repeat;
   }
@@ -49,15 +53,17 @@
   .top {
     display: flex;
     background-position: top center;
-    height: calc(var(--image-size) * 0.94);
-    z-index: 1;
+    height: calc(var(--image-size) * 0.75);
+    z-index: 3;
+    // border: 1px solid #ff00ff;
   }
 
   .bottom {
     display: flex;
     background-position: bottom center;
-    height: calc(var(--image-size) * 1.26);
+    height: calc(var(--image-size) * 0.93);
     z-index: 3;
+    // border: 1px solid #ff00ff;
   }
 
   .banner {
