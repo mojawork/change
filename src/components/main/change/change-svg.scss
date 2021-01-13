@@ -6,44 +6,44 @@
 
 .wrapper {
 
-  &.vader {
-    .top, .bottom {
+  .vader {
+    &.top, &.bottom {
       background-image: url("../../../assets/svg/vader.svg");
     }
   }
 
-  &.master {
-    .top, .bottom {
+  .master {
+    &.top, &.bottom {
       background-image: url("../../../assets/svg/master.svg");
     }
   }
 
-  &.mario {
-    .top, .bottom {
+  .mario {
+    &.top, &.bottom {
       background-image: url("../../../assets/svg/mario.svg");
     }
   }
 
-  &.sonic {
-    .top, .bottom {
+  .sonic {
+    &.top, &.bottom {
       background-image: url("../../../assets/svg/sonic.svg");
     }
   }
 
-  &.harley {
-    .top, .bottom {
+  .harley {
+    &.top, &.bottom {
       background-image: url("../../../assets/svg/harley.svg");
     }
   }
 
-  &.deadpool {
-    .top, .bottom {
+  .deadpool {
+    &.top, &.bottom {
       background-image: url("../../../assets/svg/deadpool.svg");
     }
   }
 
-  &.crash {
-    .top, .bottom {
+  .crash {
+    &.top, &.bottom {
       background-image: url("../../../assets/svg/crash.svg");
     }
   }

@@ -1,13 +1,24 @@
-<div class="wrapper" :class="options.cssClass">
-    <div class="top"/>
+<div class="wrapper">
+    <header>
+        <div class="left" @click="moveTop(direction.right)"/>
+        <div v-for="(image, index) in options.imageSet" class="wrapper-image" :style="index === 0 ? styleTop() : 0">
+            <div class="top" :class="image"/>
+        </div>
+        <div class="right" @click="moveTop(direction.left)"/>
+    </header>
     <section class="banner">
-            <GlobalTextAnimation
-                    :options="{
-                          text: options.headline,
-                          count: 60,
-                          animation: textAnimationNames.zoomInOut
-                }"
-            />
+        <GlobalTextAnimation
+                :options="{
+                      text: options.headline,
+                      count: 60,
+                      animation: options.animation
+            }"/>
     </section>
-    <div class="bottom"/>
+    <footer>
+        <div class="left" @click="moveBottom(direction.right)"/>
+        <div v-for="(image, index) in options.imageSet" class="wrapper-image" :style="index === 0 ? styleBottom() : 0">
+            <div class="bottom" :class="image"/>
+        </div>
+        <div class="right" @click="moveBottom(direction.left)"/>
+    </footer>
 </div>

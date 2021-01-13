@@ -1,6 +1,5 @@
-import {Prop} from "vue-property-decorator";
 
-export enum eTextAnimationNames {
+export enum eMainTextAnimationNames {
     zoomInOut = 'zoomInOut',
     scaleX = 'scaleX',
     moveIn = 'moveIn',
@@ -9,5 +8,5 @@ export enum eTextAnimationNames {
 export interface  iTextAnimation {
     text: string;
     count:  string | number;
-    animation : eTextAnimationNames
+    animation : eMainTextAnimationNames
 }

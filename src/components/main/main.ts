@@ -1,13 +1,14 @@
-import { Component, Vue } from "vue-property-decorator";
+import {Component, Vue} from "vue-property-decorator";
 import MainChange from "@/components/main/change/change.vue";
+import {IMainChange} from "@/components/main/change/change.interface";
+import { imageSet, data } from "@/data/data";
 
 @Component({
-  components: {
-    MainChange
-  }
+    components: {
+        MainChange
+    }
 })
 export default class Main extends Vue {
-
-  //  --- Lifecycle hooks ---
-  private mounted() {}
+    public data: Array<IMainChange> = data;
+    public imageSet: Array<string> = imageSet;
 }

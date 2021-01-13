@@ -1,48 +1,14 @@
 <main>
     <div class="layout-wrapper">
-
         <div class="grid">
-
-            <MainChange :options="{
-            headline: 'crash',
-            cssClass: 'crash'
-        }"/>
-
-            <MainChange :options="{
-            headline: 'harley',
-            cssClass: 'harley'
-        }"/>
-
-            <MainChange :options="{
-            headline: 'deadpool',
-            cssClass: 'deadpool'
-        }"/>
-
-
-
-            <MainChange :options="{
-            headline: 'mario',
-            cssClass: 'mario'
-        }"/>
-
-            <MainChange :options="{
-            headline: 'vader',
-            cssClass: 'vader'
-        }"/>
-
-            <MainChange :options="{
-            headline: 'master',
-            cssClass: 'master'
-        }"/>
-
-            <MainChange :options="{
-            headline: 'sonic',
-            cssClass: 'sonic'
-        }"/>
-
-
+            <MainChange v-for="(item, index) in data"
+                :options="{
+                    headline: item.headline,
+                    animation: item.animation,
+                    count:index,
+                    imageSet: imageSet
+                }"/>
         </div>
-
     </div>
 </main>
 

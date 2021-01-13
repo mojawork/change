@@ -7,9 +7,19 @@
 main {
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $margin *2;
-    margin: $margin* 2 0
+    margin: $margin* 2 0;
+
+    @include mediascreen($mediascreen: 'custom', $max: $ms-5-max) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mediascreen($mediascreen: 'custom', $min: $ms-6-min) {
+      grid-template-columns: 1fr 1fr 1fr;
+      > *:nth-child(4n) {
+        grid-column: 1 / span 3;
+      }
+    }
   }
 }
 
