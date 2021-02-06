@@ -9,6 +9,6 @@ export enum IMainCangeDirection {
 export interface IMainChange {
     headline: string;
     animation:eMainTextAnimationNames;
-    count?:number;
+    count:number;
     imageSet?: Array<string>;
 }
