@@ -4,32 +4,39 @@ import {eMainTextAnimationNames} from "@/components/main/text-animation/text-ani
 export const data: Array<IMainChange> = [
     {
         headline: 'Vader',
-        animation: eMainTextAnimationNames.scaleX
+        animation: eMainTextAnimationNames.scaleX,
+        count: 0
     },
     {
         headline: 'Master',
-        animation: eMainTextAnimationNames.zoomInOut
+        animation: eMainTextAnimationNames.zoomInOut,
+        count: 0
     },
     {
         headline: 'Mario',
-        animation: eMainTextAnimationNames.moveIn
+        animation: eMainTextAnimationNames.moveIn,
+        count: 0
     },
 
     {
         headline: 'sonic',
-        animation: eMainTextAnimationNames.moveIn
+        animation: eMainTextAnimationNames.moveIn,
+        count: 0
     },
     {
         headline: 'harley',
-        animation: eMainTextAnimationNames.moveIn
+        animation: eMainTextAnimationNames.zoomInOut,
+        count: 0
     },
     {
         headline: 'deadpool',
-        animation: eMainTextAnimationNames.moveIn
+        animation: eMainTextAnimationNames.scaleX,
+        count: 0
     },
     {
         headline: 'crash',
-        animation: eMainTextAnimationNames.moveIn
+        animation: eMainTextAnimationNames.moveIn,
+        count: 0
     }
 ]
 
